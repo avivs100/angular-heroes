@@ -1,11 +1,25 @@
 <div *ngIf="hero">
-
   <h2>{{hero.name | uppercase}} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
     <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
   </div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
 
+  <div *ngIf="hero.name === 'Alpaca Master'">
+    <img src="./assets/alpaka.jpeg" alt="" >
+
+  </div>
+  <div *ngIf="hero.name === 'Boss Man'">
+    <img src="./assets/boss.jpeg" alt="" >
+
+  </div>
+  <div *ngIf="hero.name === 'Anti-corruption Gang'">
+    <img src="./assets/Corruption.jpeg" alt="" >
+
+  </div>
 </div>
+
 
